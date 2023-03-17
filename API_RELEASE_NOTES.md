@@ -1,4 +1,4 @@
-**Current
+**Next**
 
 - Based New rate limit for unauthenticated users: 5,000 requests per minute!!!
 

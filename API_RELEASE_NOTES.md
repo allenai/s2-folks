@@ -1,7 +1,9 @@
 **Next**
 
-- Based New rate limit for unauthenticated users: 5,000 requests per minute!!! Thank you for suggesting it!
-- We added citations, references and authors to the `/paper/batch` endpoint, bringing it closer to feature parity with /paper/{paper_id} endpoint. See [documentation](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/post_graph_get_papers) of the `/paper/batch` endpoint for more details. Thank you for suggesting it!
+**March 28, 2023**
+
+- Our partners (i.e., users of the public Semantic Scholar APIs) have been asking for a higher rate limit for unauthenticated use cases, and we've been listening. We're happy to report that the default rate limit for unauthenticated users is now **5,000 requests per minute**.
+- Our partners have been asking for feature parity between the `/paper/batch` endpoint and the `/paper/{paper_id}` endpoint. We're working on closing the gap, and you can now get additional paper details (citations, references and authors) in batch mode by specifying the fields `citations`, `references` and `authors` when making the POST request. See [documentation](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/post_graph_get_papers) of the `/paper/batch` endpoint for more details.
 
 **March 8, 2023**
 

@@ -1,4 +1,7 @@
-**Next**
+**April 6, 2023**
+
+- Several API partners have reported that the bulk endpoint `graph/v1/paper/batch` sometimes return papers in an order that's different from the requested paper IDs, and the returned list may be missing some of the requested entries (e.g., https://github.com/allenai/s2-folks/issues/47). We're happy to report that you can now expect the returned list to be of the same size and in the same order as the requested paper IDs.
+- Another issue is that various endpoints used to time out when nested authors/papers get too long ([internal pointer](https://github.com/allenai/scholar/issues/31537)), which resulted in mysterious 5XX error codes. We're happy to report that users now get a user friendly error to help them resubmit the requests with a smaller payload.
 
 **March 28, 2023**
 

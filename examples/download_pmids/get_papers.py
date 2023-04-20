@@ -25,8 +25,8 @@ with open(dest, 'w') as fp:
     csvfile = csv.DictWriter(fp, ['pmid', 'title', 'first_author', 'year', 'abstract'])
     csvfile.writeheader()
 
-    # groups of 100 to take advantage of S2 batch paper endpoint
-    for pmid_batch in chunks(pmids, 100):
+    # take advantage of S2 batch paper endpoint
+    for pmid_batch in chunks(pmids, 50):
         papers = fetch_paper_batch(pmid_batch)
 
         for paper in papers:

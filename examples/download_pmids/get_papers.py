@@ -30,11 +30,12 @@ with open(dest, 'w') as fp:
         papers = fetch_paper_batch(pmid_batch)
 
         for paper in papers:
+            paper_authors = paper.get('authors', [])
             csvfile.writerow({
                 'pmid': paper['externalIds']['PubMed'],
                 'title': paper['title'],
-                'first_author': paper['authors'][0]['name'],
-                'year': paper['externalIds']['PubMed'],
+                'first_author': paper_authors[0]['name'] if paper_authors else '<no_author_data>',
+                'year': paper['year'],
                 'abstract': paper['abstract'],
             })
             count += 1

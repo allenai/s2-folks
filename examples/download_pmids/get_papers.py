@@ -1,4 +1,5 @@
 import csv
+import sys
 
 import requests
 
@@ -26,10 +27,11 @@ with open(dest, 'w') as fp:
     csvfile.writeheader()
 
     # take advantage of S2 batch paper endpoint
-    for pmid_batch in chunks(pmids, 50):
+    for pmid_batch in chunks(pmids, 20):
         papers = fetch_paper_batch(pmid_batch)
 
         for paper in papers:
+            print(paper)
             paper_authors = paper.get('authors', [])
             csvfile.writerow({
                 'pmid': paper['externalIds']['PubMed'],

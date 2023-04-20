@@ -1,6 +1,6 @@
-This example fetches paper data from a list of ~1000 PMIDs retrieved from
+This example fetches paper data from a list of PMIDs retrieved from
 
-https://pubmed.ncbi.nlm.nih.gov/?term=p53&filter=datesearch.y_1&size=200
+https://pubmed.ncbi.nlm.nih.gov/?term=p53&filter=datesearch.y_1&size=10
 
 and maps JSON returned by the semanticscholar API into papers.csv
 

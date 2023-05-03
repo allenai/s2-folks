@@ -40,7 +40,7 @@ with open(dest, 'w') as fp:
                 'title': paper['title'],
                 'first_author': paper_authors[0]['name'] if paper_authors else '<no_author_data>',
                 'year': paper['year'],
-                # 'abstract': paper['abstract'],
+                'abstract': paper['abstract'],
             })
             count += 1
 

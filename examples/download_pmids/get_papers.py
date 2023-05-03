@@ -1,5 +1,4 @@
 import csv
-import sys
 
 import requests
 
@@ -27,18 +26,21 @@ with open(dest, 'w') as fp:
     csvfile.writeheader()
 
     # take advantage of S2 batch paper endpoint
-    for pmid_batch in chunks(pmids, 20):
+    for pmid_batch in chunks(pmids, 100):
         papers = fetch_paper_batch(pmid_batch)
 
         for paper in papers:
             print(paper)
+            # In batch requests if an ID is not found, the corresponding entry in the response will be null.
+            if not paper:
+                break
             paper_authors = paper.get('authors', [])
             csvfile.writerow({
                 'pmid': paper['externalIds']['PubMed'],
                 'title': paper['title'],
                 'first_author': paper_authors[0]['name'] if paper_authors else '<no_author_data>',
                 'year': paper['year'],
-                'abstract': paper['abstract'],
+                # 'abstract': paper['abstract'],
             })
             count += 1
 

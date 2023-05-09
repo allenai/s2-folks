@@ -1,0 +1,7 @@
+argparse
+python-dotenv
+requests
+
+# parallel.py only
+aiohttp[speedups]
+asyncio

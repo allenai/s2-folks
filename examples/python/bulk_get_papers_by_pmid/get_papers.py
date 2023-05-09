@@ -11,15 +11,17 @@ def chunks(items, chunk_size):
 def fetch_paper_batch(pmids):
     req = {'ids': [f'PMID:{pmid}' for pmid in pmids]}
     # https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/post_graph_get_papers
-    rsp = requests.post('https://api.semanticscholar.org/graph/v1/paper/batch'
-                        '?fields=externalIds,title,authors,year,abstract',
+    rsp = requests.post('https://api.semanticscholar.org/graph/v1/paper/batch',
+                        params={'fields': 'externalIds,title,authors,year,abstract'},
                         json=req)
     if rsp.status_code != 200:
         raise Exception(f'Problem fetching {req}: ' + rsp.text)
     return rsp.json()
 
 
-pmids = [line.strip() for line in open('pmid-p53-set.txt').readlines()]
+with open('pmid-p53-set.txt') as pmid_file:
+    pmids = [line.strip() for line in pmid_file.readlines()]
+
 dest = 'papers.csv'
 count = 0
 with open(dest, 'w') as fp:

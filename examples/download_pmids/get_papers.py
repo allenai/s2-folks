@@ -1,4 +1,5 @@
 import csv
+import sys
 
 import requests
 
@@ -45,3 +46,8 @@ with open(dest, 'w') as fp:
             count += 1
 
 print(f'Wrote {count} results to {dest}')
+
+# For occasionally verifying this script, error if we don't find enough records.
+if count < 580:
+    print(f'Too many records missing. S2, please investigate.')
+    sys.exit(1)

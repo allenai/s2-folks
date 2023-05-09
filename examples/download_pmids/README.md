@@ -9,7 +9,8 @@ It makes use of docker to avoid python environment headaches. To run the example
     ./run.sh
 
 The entire example is dockerized for consistency regardless of host environments. If you are unfamiliar with Docker,
-you can learn about it on https://docker-curriculum.com/ or you can translate the steps in the [Dockerfile] to your 
-own preferred python environment (i.e. virtualenv, pyenv, conda).
+you can learn about it on https://docker-curriculum.com/ or you can translate environmental details in the [Dockerfile] 
+to your own preferred python environment (i.e. virtualenv, pyenv, conda). It's really just a few dependencies
+in requirements.txt
 
 [Dockerfile]: ./Dockerfile

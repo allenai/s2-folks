@@ -21,8 +21,13 @@ for example_test in */test.sh ; do
   if [ $? -eq 0 ]; then
     echo "  $example_test succeeded!"
   else
+    tests_failed=yes
     echo "  $example_test exited non-zero and may have errored. Please investigate."
   fi
 
   popd > /dev/null
 done
+
+if [ "$tests_failed" != "" ] ; then
+  exit 1
+fi

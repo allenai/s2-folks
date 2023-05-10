@@ -1,3 +1,3 @@
 import requests
 
-print('All is well.')
+raise Exception('All is NOT well.')

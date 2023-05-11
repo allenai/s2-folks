@@ -3,7 +3,7 @@
 
 cd "$(dirname "$(readlink -f "$0")")"
 
-for example_test in */test.sh ; do
+for example_test in */test ; do
   echo "Running $example_test"
   example_dir="$(dirname "$example_test")"
   pushd . > /dev/null
@@ -16,7 +16,7 @@ for example_test in */test.sh ; do
     pip install -r "requirements.txt"
   fi
 
-  ./test.sh
+  ./test
 
   if [ $? -eq 0 ]; then
     echo "  $example_test succeeded!"

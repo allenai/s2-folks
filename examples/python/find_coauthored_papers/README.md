@@ -16,8 +16,9 @@ Example finding papers coauthored between [Oren Etzioni] and [Dan Weld].
     {'authorId': '70483292', 'url': 'https://www.semanticscholar.org/author/70483292', 'name': 'O. Etzioni'}
     Re-run with a specific ID.
 
-Because "o etzioni" matches two authors, the script prints out links to the author pages on semanticscholar.org.
-We re-run the script with the specific ID that we want.
+Because "o etzioni" matches two authors, the script prints out links 
+to the author pages on semanticscholar.org. We re-run the script with 
+the specific ID that we want.
 
     $ python find_papers.py 1741101 "dan s weld"
     Left author: Oren Etzioni https://www.semanticscholar.org/author/1741101

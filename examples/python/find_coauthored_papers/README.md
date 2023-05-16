@@ -1,7 +1,7 @@
 Given two author names, this script finds coauthored papers.
 In the case there are multiple matches for either author's name,
-we print a description of each match. The user should then re-run
-this script with a specific author ID.
+we print a description of each match. The user should figure out which
+author they actually want, and then re-run with a specific author ID.
 
 S2 APIs involved:
 * [/graph/v1/author/search](https://api.semanticscholar.org/api-docs/graph#tag/Author-Data/operation/get_graph_get_author_search)

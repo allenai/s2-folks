@@ -1,6 +1,6 @@
 Given two author names, this script finds coauthored papers.
-In the case that multiple authors match either author name,
-a summary of each author is printed. The user should then re-run
+In the case there are multiple matches for either author's name,
+we print a description of each match. The user should then re-run
 this script with a specific author ID.
 
 S2 APIs involved:

@@ -33,7 +33,6 @@ with open(dest, 'w') as fp:
         papers = fetch_paper_batch(pmid_batch)
 
         for paper in papers:
-            print(paper)
             # In batch requests if an ID is not found, the corresponding entry in the response will be null.
             if not paper:
                 break

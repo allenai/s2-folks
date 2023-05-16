@@ -1,7 +1,3 @@
-"""
-Sample usage of Semantic Scholar Academic Graph Datasets API
-https://api.semanticscholar.org/api-docs/datasets
-"""
 import requests
 import urllib
 import json
@@ -23,7 +19,8 @@ print("\n".join(d['name'] for d in latest_release['datasets']))
 print(latest_release['datasets'][2]['README'])
 
 # Get info about the papers dataset
-papers = requests.get("http://api.semanticscholar.org/datasets/v1/release/latest/dataset/papers",headers={'x-api-key':os.getenv("S2_API_KEY")}).json()
+papers = requests.get("http://api.semanticscholar.org/datasets/v1/release/latest/dataset/papers",
+                      headers={'x-api-key':os.getenv("S2_API_KEY")}).json()
 
 # Download the dataset
 urllib.request.urlretrieve(papers['files'][0], "papers-part0.jsonl.gz")
@@ -32,16 +29,16 @@ urllib.request.urlretrieve(papers['files'][0], "papers-part0.jsonl.gz")
 # Explore datasets
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-## Papers
+# Papers
 papers = [json.loads(l) for l in open("papers/papers-sample.jsonl","r").readlines()]
 
-## Citations
+# Citations
 citations = [json.loads(l) for l in open("citations/citations-sample.jsonl","r").readlines()]
 
-## Embeddings
+# Embeddings
 embeddings = [json.loads(l) for l in open("embeddings/embeddings-sample.jsonl","r").readlines()]
 
-## S2ORC
+# S2ORC
 docs = [json.loads(l) for l in open("s2orc/s2orc-sample.jsonl","r").readlines()]
 text = docs[0]['content']['text']
 annotations = {k:json.loads(v) for k,v in docs[0]['content']['annotations'].items() if v}

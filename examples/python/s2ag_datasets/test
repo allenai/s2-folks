@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python s2ag-datasets

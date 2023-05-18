@@ -36,5 +36,5 @@ Up to 10 recommendations based on: S2AND: A Benchmark and Evaluation System for 
 
 Note that the keyword search provides a number of works generally related
 to author name disambiguation. We choose the 2nd paper to feed as input
-to the recommendation API, which re-orients our results to works involving  
+to the recommendation API, which re-orients our results to works involving 
 NLP techniques applied to scientific literature.

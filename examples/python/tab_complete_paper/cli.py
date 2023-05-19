@@ -1,9 +1,7 @@
-import sys
 import re
 
 import click
 import requests
-from click import ParamType
 
 
 def complete_title(ctx, param, incomplete):

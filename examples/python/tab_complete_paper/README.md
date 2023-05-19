@@ -24,6 +24,3 @@ Activating completions for bash or fish is similar. See [click shell completion 
 
 Once the `paper-url` command is available and plugged in for tab completion, here's an example usage
 
-```
-
-```

@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # Minimal script to periodically run this example to see if it still works.
 import subprocess
 

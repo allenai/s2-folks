@@ -26,8 +26,9 @@
     // https://web.archive.org/web/20230306015242/http://www.runningcoder.org/jquerytypeahead/
     $.typeahead({
         input: '.js-typeahead',
-        display: ['title'],
-        filter: false,
+        dynamic: true,
+        filter: false,  // disable client-side filtering
+        minLength: 3,  // api requires at least 3 chars
         source: {
             callApi: {
                 ajax: {
@@ -39,7 +40,7 @@
                 }
             }
         },
-        dynamic: true,
+        display: ['title'],
         callback: {
             onClick: function(node, a, item, event) {
                 window.open(`https://api.semanticscholar.org/${item.id}`, '_blank')

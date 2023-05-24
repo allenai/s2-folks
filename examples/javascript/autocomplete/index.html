@@ -22,9 +22,12 @@
     </div>
 </form>
 <script>
+    // docs host is gone, use archive.org
+    // https://web.archive.org/web/20230306015242/http://www.runningcoder.org/jquerytypeahead/
     $.typeahead({
         input: '.js-typeahead',
         display: ['title'],
+        filter: false,
         source: {
             callApi: {
                 ajax: {

@@ -1,0 +1,52 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.2/jquery.typeahead.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.2/jquery.typeahead.min.css">
+</head>
+<body>
+<form>
+    <div class="typeahead__container">
+        <div class="typeahead__field">
+            <div class="typeahead__query">
+                <input class="js-typeahead"
+                       name="q"
+                       autocomplete="off">
+            </div>
+            <div class="typeahead__button">
+                <button type="submit">
+                    <span class="typeahead__search-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    // docs host is gone, use archive.org
+    // https://web.archive.org/web/20230306015242/http://www.runningcoder.org/jquerytypeahead/
+    $.typeahead({
+        input: '.js-typeahead',
+        dynamic: true,
+        filter: false,  // disable client-side filtering
+        minLength: 3,  // api requires at least 3 chars
+        source: {
+            callApi: {
+                ajax: {
+                    url: 'https://api.semanticscholar.org/graph/v1/paper/autocomplete',
+                    data: {
+                        query: '{{query}}'
+                    },
+                    path: 'matches',
+                }
+            }
+        },
+        display: ['title'],
+        callback: {
+            onClick: function(node, a, item, event) {
+                window.open(`https://api.semanticscholar.org/${item.id}`, '_blank')
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,1 +1,3 @@
+argparse
+python-dotenv
 requests

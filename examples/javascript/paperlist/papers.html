@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sample paper import</title>
+    <style type="text/css">
+        body{background:#f5f6f7;}
+    </style>
+    <link href="style.css" rel="stylesheet">
+    <script src="get_papers.js" type="text/javascript"></script>
+  </head>
+
+
+<body>
+
+
+      <div style="margin:0 auto; padding:24px;">
+
+          <papers_list> </papers_list> <!-- This will be auto populated -->
+          <script> data = populate_papers("27604402", 'https://ykl7.github.io/files/extra/S2_author_data.json'); </script>
+          <!-- <script> data = populate_lab_papers(["27604402", "145743099"], "table"); console.log(data); </script> -->
+      </div>
+
+
+</body>
+</html>

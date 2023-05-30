@@ -22,7 +22,7 @@ for a in annotations['bibentry'][:10]:
     print(a)
 
 def text_of(type):
-    return [text[a['start']:a['end']] for a in annotations[type]]
+    return [text[a['start']:a['end']] for a in annotations.get(type, '')]
 
 print(text_of('abstract'))
 print('\n\n'.join(text_of('paragraph')[:3]))

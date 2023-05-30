@@ -1,3 +1,7 @@
+For monitoring we group similar API endpoints into semantic categories.
+You can find high-level status about each category of APIs on our API Health page at status.api.semanticscholar.org/ 
+You can find a number of other API-releated resources on our api front page at https://api.semanticscholar.org/
+
 Paper Services
 /graph/v1/paper/{paper_id}
 /graph/v1/paper/autocomplete

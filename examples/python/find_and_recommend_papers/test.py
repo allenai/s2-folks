@@ -8,6 +8,7 @@ python find_papers.py << EOL
 author name disambiguation in papers
 5
 EOL''')
+print(output)
 
 # We are just spot checking for a few things in a successful output sequence.
 assert re.search('Found \\d+ results', output)

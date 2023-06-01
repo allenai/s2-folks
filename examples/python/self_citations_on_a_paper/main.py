@@ -51,7 +51,7 @@ def get_references(paper_id):
 
 
 def get_citation_edges(**req_kwargs):
-    """This works for both citations and references."""
+    """This helps with API endpoints that involve paging."""
     page_size = 1000
     offset = 0
     while True:
@@ -71,6 +71,7 @@ def get_citation_edges(**req_kwargs):
 
 
 def find_self_citations(target_authors, papers):
+    """Filter papers to those that contain any of the target authors."""
     authors_by_id = {a['authorId']: a for a in target_authors}
     for paper in papers:
         paper_author_ids = {a['authorId'] for a in paper['authors']}

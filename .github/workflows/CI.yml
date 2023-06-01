@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    environment: CI
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
@@ -22,4 +22,5 @@ jobs:
           python-version: '3.10'
       - name: Run python examples with tests
         run: examples/python/run_tests.sh
-
+        env:
+          S2_API_KEY: ${{ vars.S2_API_KEY }}

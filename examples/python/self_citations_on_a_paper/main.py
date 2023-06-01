@@ -1,6 +1,9 @@
 import argparse
+import os
 
 import requests
+
+S2_API_KEY = os.getenv('S2_API_KEY')
 
 
 def main():
@@ -33,6 +36,7 @@ def main():
 
 def get_paper(paper_id):
     rsp = requests.get(f'https://api.semanticscholar.org/graph/v1/paper/{paper_id}',
+                       headers={'x-api-key': S2_API_KEY},
                        params={'fields': 'title,authors'})
     rsp.raise_for_status()
     return rsp.json()
@@ -40,12 +44,14 @@ def get_paper(paper_id):
 
 def get_citations(paper_id):
     edges = get_citation_edges(url=f'https://api.semanticscholar.org/graph/v1/paper/{paper_id}/citations',
+                               headers={'x-api-key': S2_API_KEY},
                                params={'fields': 'title,authors'})
     return list(edge['citingPaper'] for edge in edges)
 
 
 def get_references(paper_id):
     edges = get_citation_edges(url=f'https://api.semanticscholar.org/graph/v1/paper/{paper_id}/references',
+                               headers={'x-api-key': S2_API_KEY},
                                params={'fields': 'title,authors'})
     return list(edge['citedPaper'] for edge in edges)
 

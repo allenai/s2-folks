@@ -1,7 +1,9 @@
+import os
 import re
 
 import requests
 
+S2_API_KEY = os.getenv('S2_API_KEY')
 result_limit = 10
 
 
@@ -18,6 +20,7 @@ def find_basis_paper():
             continue
 
         rsp = requests.get('https://api.semanticscholar.org/graph/v1/paper/search',
+                           headers={'x-api-key': S2_API_KEY},
                            params={'query': query, 'limit': result_limit, 'fields': 'title,url'})
         rsp.raise_for_status()
         results = rsp.json()
@@ -39,6 +42,7 @@ def find_basis_paper():
 def find_recommendations(paper):
     print(f"Up to {result_limit} recommendations based on: {paper['title']}")
     rsp = requests.get(f"https://api.semanticscholar.org/recommendations/v1/papers/forpaper/{paper['paperId']}",
+                       headers={'x-api-key': S2_API_KEY},
                        params={'fields': 'title,url', 'limit': 10})
     rsp.raise_for_status()
     results = rsp.json()

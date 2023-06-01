@@ -16,7 +16,7 @@ def main():
 
     print('Finding citing papers with those authors...')
     citations = get_citations(args.paper_id)
-    self_citations = list(find_self_citations(paper['authors'], citations))
+    self_citations = list(filter_self_citing(paper['authors'], citations))
     print(f'Paper has {len(citations)} citations of which {len(self_citations)} contain self-citing authors.')
     for paper, self_citers in self_citations:
         author_names = ', '.join(a['name'] for a in self_citers)
@@ -24,7 +24,7 @@ def main():
 
     print('Finding referenced papers with those authors...')
     references = get_references(args.paper_id)
-    self_references = list(find_self_citations(paper['authors'], references))
+    self_references = list(filter_self_citing(paper['authors'], references))
     print(f'Paper has {len(references)} references of which {len(self_references)} contain self-referencing authors.')
     for paper, self_referencers in self_references:
         author_names = ', '.join(a['name'] for a in self_referencers)
@@ -70,7 +70,7 @@ def get_citation_edges(**req_kwargs):
         offset += page_size
 
 
-def find_self_citations(target_authors, papers):
+def filter_self_citing(target_authors, papers):
     """Filter papers to those that contain any of the target authors."""
     authors_by_id = {a['authorId']: a for a in target_authors}
     for paper in papers:

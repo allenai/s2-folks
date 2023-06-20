@@ -1,6 +1,9 @@
 **June 20, 2023**
 
-- We've launched a new KNN that supports all CS papers in our Recommendations API. Use the 'from' query parameter to specifcy which pool of papers you want recommendations to pull from. The default value of "recent" pulls papers published within the last 60 days across all fields of study in our corpus. "all-cs" will pull from only CS papers, but covers CS papers across our corpus regardless of publication date. Full ducomentation [here](https://api.semanticscholar.org/api-docs/recommendations#tag/Paper-Recommendations/operation/get_papers_for_paper)
+- We've launched a new KNN that supports all CS papers in our Recommendations API. Use the 'from' query parameter to specify which pool of papers you want recommendations to pull from. The default value of "recent" pulls papers published within the last 60 days across all fields of study in our corpus. "all-cs" will pull from only CS papers, but covers CS papers across our corpus regardless of publication date. Full documentation [here](https://api.semanticscholar.org/api-docs/recommendations#tag/Paper-Recommendations/operation/get_papers_for_paper)
+
+**June 6, 2023**
+- We’re excited to announce the launch of our Semantic Scholar [API Status Page](https://status.api.semanticscholar.org/). You can find real-time information on system performance and detailed metrics of the API (e.g. response time, error rates), as well as subscribe to updates.
 
 **April 6, 2023**
 

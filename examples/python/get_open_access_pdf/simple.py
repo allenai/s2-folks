@@ -54,6 +54,9 @@ def download_paper(session: Session, paper_id: str, directory: str = 'papers', u
     if not paper['isOpenAccess']:
         return None
 
+    if pdf_url: str = paper['openAccessPdf'] is None:
+        return None
+
     paperId: str = paper['paperId']
     pdf_url: str = paper['openAccessPdf']['url']
     pdf_path = os.path.join(directory, f'{paperId}.pdf')

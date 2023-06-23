@@ -77,11 +77,10 @@ async def download_papers(paper_ids: list[str], directory: str = 'papers', batch
             if not paper['isOpenAccess']:
                 yield paper_id, None
 
-            paperId: str = paper['paperId']
-            pdf_url: str = paper['openAccessPdf']['url']
-            pdf_path = os.path.join(directory, f'{paperId}.pdf')
-
             try:
+                paperId: str = paper['paperId']
+                pdf_url: str = paper['openAccessPdf']['url']
+                pdf_path = os.path.join(directory, f'{paperId}.pdf')
                 await download_pdf(session, pdf_url, pdf_path)
                 yield paper_id, pdf_path
             except Exception as e:

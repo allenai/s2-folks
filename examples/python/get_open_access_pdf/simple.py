@@ -54,7 +54,7 @@ def download_paper(session: Session, paper_id: str, directory: str = 'papers', u
     if not paper['isOpenAccess']:
         return None
 
-    if pdf_url: str = paper['openAccessPdf'] is None:
+    if paper['openAccessPdf'] is None:
         return None
 
     paperId: str = paper['paperId']

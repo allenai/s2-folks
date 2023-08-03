@@ -31,7 +31,7 @@ async def get_papers(session: ClientSession, paper_ids: list[str], batch_size = 
             **kwargs,
         }
         headers = {
-            'x-api-key': S2_API_KEY,
+            'X-API-KEY': S2_API_KEY,
         }
         json = {
             'ids': batch,

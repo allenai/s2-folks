@@ -19,7 +19,7 @@ def get_paper(session: Session, paper_id: str, fields: str = 'paperId,title', **
         **kwargs,
     }
     headers = {
-        'X-API-KEY': S2_API_KEY,
+        'x-api-key': S2_API_KEY,
     }
 
     with session.get(f'https://api.semanticscholar.org/graph/v1/paper/{paper_id}', params=params, headers=headers) as response:

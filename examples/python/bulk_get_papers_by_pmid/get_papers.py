@@ -23,7 +23,7 @@ def get_paper_batch(session: Session, ids: list[str], fields: str = 'paperId,tit
         **kwargs,
     }
     headers = {
-        'X-API-KEY': S2_API_KEY,
+        'x-api-key': S2_API_KEY,
     }
     body = {
         'ids': ids,

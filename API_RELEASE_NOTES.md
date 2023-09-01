@@ -4,14 +4,13 @@
 ### Breaking Changes
 * **Deprecation of partner.semanticscholar.org**
 * On December 2023 we will turn off access to partner.semanticscholar.org 
-Ensure you’re using https://api.semanticscholar.org/ before the cutoff date
+* Ensure that you replace "partner.semanticscholar.org" with "api.semanticscholar.org" in all URLs before the cutoff date.
 
 ### New Features
 * **Specter2 embeddings**
-* What is it? AI2’s SPECTER 2.0 is the latest version of our document embedding models designed specifically for scientific tasks. Building upon its predecessor, SPECTER, it's tailored to generate task-specific embeddings, such as Classification, Regression, Retrieval, and Search. These embeddings can be generated using the title and abstract of scientific papers or textual queries.
-* How it Works? To optimize performance for a given task, users should pair the base model with appropriate adapters. Learn how to use adapters with the base model on HuggingFace.
-* Why is it Important? If you're working with scientific papers and need an effective way to extract meaningful representations for tasks like classification, retrieval, or search, then SPECTER 2.0 might be of interest.
-* Get Started: Explore SPECTER 2.0 on HuggingFace.
+* AI2’s SPECTER 2.0 is the latest version of our document embedding models designed specifically for scientific tasks. 
+Building upon its predecessor, SPECTER is tailored to generate embeddings for specific tasks, such as Classification, Regression, and Proximity. The API serves pre-computed Proximity embeddings, appropriate for computing the similarity between two documents.  
+The model is hosted as [allenai/specter2](https://huggingface.co/allenai/specter2) on HuggingFace, along with the models for other task-specific embeddings.
 
 * **Citations Dataset**
 Beginning with release “2023-08-29”, a new key, “citationid”, was added to each record.

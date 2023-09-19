@@ -7,7 +7,7 @@ subprocess.check_call("bash get_sample_files.sh", shell=True)
 
 papers = [json.loads(l) for l in open("samples/papers/papers-sample.jsonl", "r").readlines()]
 citations = [json.loads(l) for l in open("samples/citations/citations-sample.jsonl", "r").readlines()]
-embeddings = [json.loads(l) for l in open("samples/embeddings-specter_V2/embeddings-specter_V2-sample.jsonl", "r").readlines()]
+embeddings = [json.loads(l) for l in open("samples/embeddings-specter_v2/embeddings-specter_v2-sample.jsonl", "r").readlines()]
 
 # S2ORC
 docs = [json.loads(l) for l in open("samples/s2orc/s2orc-sample.jsonl", "r").readlines()]

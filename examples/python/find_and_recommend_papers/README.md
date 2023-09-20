@@ -1,4 +1,4 @@
-This interative example searches for some candidate papers and 
+This interactive example searches for some candidate papers and 
 then has the user select one on which to base other reading recommendations.
 
 APIs involved

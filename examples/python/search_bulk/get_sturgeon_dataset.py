@@ -1,24 +1,24 @@
 import requests
 import json
 
-query = "sturgeon"
+query = "(cold -temperature) | flu"
 fields = "title,year"
 
-url = f"http://api-dev.semanticscholar.org/graph/v1/paper/search/bulk?query={query}&fields={fields}"
+url = f"http://api-dev.semanticscholar.org/graph/v1/paper/search/bulk?query={query}&fields={fields}&year=2023-"
 r = requests.get(url).json()
 
-print(f"Will retrieve {r['total']} documents")
+print(f"Will retrieve an estimated {r['total']} documents")
 retrieved = 0
 
-with open(f"{query}.jsonl", "a") as file:
+with open(f"papers.jsonl", "a") as file:
     while True:
-        for paper in r["data"]:
-            print(json.dumps(paper), file=file)
-        token = r["token"]
-        if token:
+        if "data" in r:
             retrieved += len(r["data"])
             print(f"Retrieved {retrieved} papers...")
-        else:
+            for paper in r["data"]:
+                print(json.dumps(paper), file=file)
+        if "token" not in r:
             break
-        r = requests.get(f"{url}&token={token}").json()
-print("Done!")
+        r = requests.get(f"{url}&token={r['token']}").json()
+
+print(f"Done! Retrieved {retrieved} papers total")

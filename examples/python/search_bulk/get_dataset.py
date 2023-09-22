@@ -4,7 +4,7 @@ import json
 query = "(cold -temperature) | flu"
 fields = "title,year"
 
-url = f"http://api-dev.semanticscholar.org/graph/v1/paper/search/bulk?query={query}&fields={fields}&year=2023-"
+url = f"http://api.semanticscholar.org/graph/v1/paper/search/bulk?query={query}&fields={fields}&year=2023-"
 r = requests.get(url).json()
 
 print(f"Will retrieve an estimated {r['total']} documents")

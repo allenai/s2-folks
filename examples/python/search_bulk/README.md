@@ -5,5 +5,5 @@ This example fetches a subset of paper data specified by a simple query and writ
 
 To run:
 ```
-python get_sturgeon_dataset.py
+python get_dataset.py
 ```

@@ -9,7 +9,7 @@
 
 * **Reduction of Relevance Search maximum results from 10,000 to 1,000**
   * On October 31st we reduce the maximum sum of offset and limit from 10,000 to 1,000 results.
-  * For needs which exceed this limitation please utilize our [open corpus]([url](https://api.semanticscholar.org/api-docs/datasets)).
+  * For needs which exceed this limitation please utilize either our [open corpus via the Datasets API]([url](https://api.semanticscholar.org/api-docs/datasets)) or our [Paper Bulk Search via the Academic Graph API]([url](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_paper_bulk_search))  
 
 * **Ongoing Reminder: Deprecation of partner.semanticscholar.org**
   * In December 2023 we will turn off access to partner.semanticscholar.org 

@@ -6,4 +6,4 @@ for f in $(curl -s https://s3-us-west-2.amazonaws.com/ai2-s2ag/samples/MANIFEST.
   echo "$f"
 done
 
-gunzip -q samples/*/*.gz
+gunzip -qf samples/*/*.gz

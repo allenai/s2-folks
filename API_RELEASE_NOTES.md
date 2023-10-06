@@ -7,8 +7,12 @@
   * In order to comply with legal we will be turning off API keys which have not accepted our updated terms of service by Monday October 16, 2023
   * Please review and accept the updated agreement [here]([url](https://www.semanticscholar.org/product/api/license))
 
+* **Reduction of Relevance Search maximum results from 10,000 to 1,000**
+  * On October 31st we reduce the maximum sum of offset and limit from 10,000 to 1,000 results.
+  * For needs which exceed this limitation please utilize our [open corpus]([url](https://api.semanticscholar.org/api-docs/datasets)).
+
 * **Ongoing Reminder: Deprecation of partner.semanticscholar.org**
-  * On December 2023 we will turn off access to partner.semanticscholar.org 
+  * In December 2023 we will turn off access to partner.semanticscholar.org 
   * Ensure that you replace "partner.semanticscholar.org" with "api.semanticscholar.org" in all URLs before the cutoff date.
 
 
@@ -19,10 +23,13 @@
   * [Github code sample]([url](https://github.com/allenai/s2-folks/blob/main/examples/python/s2ag_datasets/incremental-updates.py))
 
 * **Paper Bulk Search**
-  * his feature is perfect for matching and filtering our paper data down to small sub-corpora. Our relevance search was limited in size, and our full corpus downloads involved sifting through many unrelated entries. Paper Bulk Search fits the use-case right in between!
-  * Benefits: Targeted Data Downloads: Isolate and download small sub-corpora of paper data. Allows matching and fetching up to 10,000,000 papers - far more than our relevance search method. Utilizes an optional simple boolean query against paper titles and abstracts. Sort order and page size are fixed for efficiency
+  * This feature is perfect for matching and filtering our paper data down to small sub-corpora. Our relevance search was limited in size, and our full corpus downloads involved sifting through many unrelated entries. Paper Bulk Search fits the use-case right in between!
+  * Benefits: Targeted Data Downloads: Isolate and download small sub-corpora of paper data. Allows matching and fetching up to 10,000,000 papers in batches of 1000 - far more than our relevance search method. Utilizes an optional simple boolean query against paper titles and abstracts. Results can be sorted by date, citation count, or Paper ID. Page size is fixed for efficiency.
   * [Relevant API Documentation]([url](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_paper_bulk_search))
   * [Github code sample]([url](https://github.com/allenai/s2-folks/tree/main/examples/python/search_bulk))
+
+* **New Filtering and Sorting in Paper Relevance and Paper Bulk search**
+  * Both search methods now support filtering on publicationDateOrYear and minCitationCount and the bulk search method now allows sorting the results by publicationDate or citationCount
 
 
 ### Performance Improvements

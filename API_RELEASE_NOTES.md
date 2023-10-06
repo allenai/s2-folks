@@ -1,4 +1,43 @@
 
+# **September 1, 2023 - September 31, 2023**
+
+### **Breaking Changes**
+* **Updated Terms of Service**
+  * We updated our terms of service on May 17, 2023.
+  * In order to comply with legal we will be turning off API keys which have not accepted our updated terms of service by Monday October 16, 2023
+  * Please review and accept the updated agreement [here]([url](https://www.semanticscholar.org/product/api/license))
+
+* **Ongoing Reminder: Deprecation of partner.semanticscholar.org**
+  * On December 2023 we will turn off access to partner.semanticscholar.org 
+  * Ensure that you replace "partner.semanticscholar.org" with "api.semanticscholar.org" in all URLs before the cutoff date.
+
+
+### **New Features**
+* **Incremental Datasets**
+  * This feature allows you to update your datasets by downloading only the changes made since your last download. Benefits: Update datasets without downloading everything from scratch and save on download time and storage.
+  * [Relevant API Documentation ]([url](https://api.semanticscholar.org/api-docs/datasets#tag/Incremental-Updates))
+  * [Github code sample]([url](https://github.com/allenai/s2-folks/blob/main/examples/python/s2ag_datasets/incremental-updates.py))
+
+* **Paper Bulk Search**
+  * his feature is perfect for matching and filtering our paper data down to small sub-corpora. Our relevance search was limited in size, and our full corpus downloads involved sifting through many unrelated entries. Paper Bulk Search fits the use-case right in between!
+  * Benefits: Targeted Data Downloads: Isolate and download small sub-corpora of paper data. Allows matching and fetching up to 10,000,000 papers - far more than our relevance search method. Utilizes an optional simple boolean query against paper titles and abstracts. Sort order and page size are fixed for efficiency
+  * [Relevant API Documentation]([url](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_paper_bulk_search))
+  * [Github code sample]([url](https://github.com/allenai/s2-folks/tree/main/examples/python/search_bulk))
+
+
+### Performance Improvements
+* **Ongoing Reminder API Rate limit**
+  * Unauthenticated: All unauthenticated users share a limit of 5,000 requests per 5 minutes.
+  * Authenticated: 1 request per second for: /paper/batch, /paper/search, /recommendations and 10 requests / second for all other calls
+
+
+### Other Changes
+* **Ongoing Reminder: Springer abstracts**
+  * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
+
+
+
+
 # **August 1, 2023 - August 31, 2023**
 
 ### **Breaking Changes**

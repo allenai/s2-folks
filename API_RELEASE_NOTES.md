@@ -1,5 +1,5 @@
 
-# **September 1, 2023 - September 31, 2023**
+# **September 1, 2023 - September 30, 2023**
 
 ### **Breaking Changes**
 * **Updated Terms of Service**

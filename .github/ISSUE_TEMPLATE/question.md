@@ -3,7 +3,7 @@ name: Question
 about: Ask our engineering team a question. Complex/Nebulous questions are welcome.
 title: 'Q: '
 labels: question
-assignees: wammar
+assignees: ''
 
 ---
 

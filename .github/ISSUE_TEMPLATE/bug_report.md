@@ -1,23 +1,31 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
+about: Report a malfunction or issue with the S2 API.
+title: 'Bug: '
+labels: 'bug'
 assignees: cfiorelli
 
----
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Describe the Bug**
+Provide a clear and concise description of the issue you're experiencing.
 
 **To Reproduce**
-What API calls give rise to this issue? Please do not include your API key string.
+Steps to reproduce the behavior, including specific API endpoints or queries. Please exclude any sensitive information such as your API key.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Expected Behavior**
+Describe what you anticipated happening.
+
+**Actual Behavior**
+What did the API return or how did it behave? This helps us distinguish between incorrect results and technical malfunctions.
 
 **Screenshots**
-If applicable, add screenshots to help explain your problem.
+If possible, attach screenshots or any visual aids that might clarify the issue.
 
-**Additional context**
-Add any other context about the problem here.
+**Environment Details**
+Platform (e.g., Windows, MacOS, Linux):
+Browser (if relevant):
+Any other relevant software or libraries you're using:
+Additional Context
+Include any other information that might assist us in diagnosing and fixing the issue.
+
+

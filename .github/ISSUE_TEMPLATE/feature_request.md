@@ -1,20 +1,26 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
+about: Suggest an enhancement or new feature for the S2 API.
+title: 'FR:'
+labels: 'feature request'
 assignees: 'cfiorelli'
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Is your feature request related to a specific use case or dataset?**
+Provide details on which part of the S2 API this feature would benefit. This helps us understand the broader application of your suggestion.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Problem Statement**
+A clear and concise description of what the problem is. For instance, "When trying to retrieve data from [...], it's challenging because [...]".
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Proposed Solution**
+A clear and concise description of the feature or enhancement you'd like to see.
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Benefits & Impacts**
+Describe how implementing this feature would benefit your work or the broader S2 API user community.
+
+**Alternative Solutions Considered**
+If applicable, describe any alternative solutions or features you've thought about.
+
+**Additional Context**
+Include any other relevant context, examples, or screenshots about the feature request.

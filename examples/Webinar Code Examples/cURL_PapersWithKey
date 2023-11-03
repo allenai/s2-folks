@@ -1,0 +1,1 @@
+curl -H "x-api-key: YOUR-KEY-HERE" "https://api.semanticscholar.org/graph/v1/paper/649def34f8be52c8b66281af98ae884c09aef38b?fields=url,year,authors"

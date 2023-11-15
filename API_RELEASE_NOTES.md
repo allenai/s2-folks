@@ -2,7 +2,7 @@
 
 ### **Breaking Changes**
 * **Field Deprecation - Aliases**
-  * Starting in January of next year we will not longer support the Aliases field.
+  * In our commitment to inclusivity and respecting user identities, starting January 2024, we will no longer support the Aliases field to prevent instances of deadnaming.
 
 * **Reduction of Relevance Search maximum results from 10,000 to 1,000**
   * As planned, on October 31st we reduced the maximum sum of offset and limit from 10,000 to 1,000 results.

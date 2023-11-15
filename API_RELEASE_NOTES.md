@@ -1,3 +1,33 @@
+# **October 1, 2023 - October 31, 2023**
+
+### **Breaking Changes**
+* **Field Deprecation - Aliases**
+  * Starting in January of next year we will not longer support the Aliases field.
+
+* **Reduction of Relevance Search maximum results from 10,000 to 1,000**
+  * As planned, on October 31st we reduced the maximum sum of offset and limit from 10,000 to 1,000 results.
+  * For needs which exceed this limitation please utilize either our [open corpus via the Datasets API](https://api.semanticscholar.org/api-docs/datasets) or our [Paper Bulk Search via the Academic Graph API](https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_paper_bulk_search)
+
+* **Ongoing Reminder: Deprecation of partner.semanticscholar.org**
+  * In December 2023 we will turn off access to partner.semanticscholar.org 
+  * Ensure that you replace "partner.semanticscholar.org" with "api.semanticscholar.org" in all URLs before the cutoff date.
+
+
+### **New Features**
+* **No new features for this release update**
+
+
+### Performance Improvements
+* **Ongoing Reminder API Rate limit**
+  * Unauthenticated: All unauthenticated users share a limit of 5,000 requests per 5 minutes.
+  * Authenticated: 1 request per second for: /paper/batch, /paper/search, /recommendations and 10 requests / second for all other calls
+
+
+### Other Changes
+* **Ongoing Reminder: Springer abstracts**
+  * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
+ 
+
 
 # **September 1, 2023 - September 30, 2023**
 

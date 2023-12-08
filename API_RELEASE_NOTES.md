@@ -10,7 +10,7 @@
 
 ### **New Features**
 * **New Field: contextsWithIntent**
-  * Similar to "contexts" but each context comes its associated intents. Each object returned in this list has two keys: 'context' - the text snippet, and 'intents' - associated intents for this context. For example 
+  * Similar to "contexts" but each context comes with its associated intents. Each object returned in this list has two keys: 'context' - the text snippet, and 'intents' - associated intents for this context. For example 
                     '{
                         "context": "SciBERT (Beltagy et al., 2019) follows the BERT’s ...",
                         "intent": "methodology", }'

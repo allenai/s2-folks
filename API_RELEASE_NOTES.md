@@ -1,4 +1,23 @@
-# **November**
+# **December 2023**
+
+### **Breaking Changes**
+* **Field Deprecation - Aliases**
+  * Date of change is reverted to TBD 
+
+* **Ongoing Reminder: Deprecation of partner.semanticscholar.org**
+  * This was planned for December 2023 but is now anticipated to take place by end of January 2024
+  * Ensure that you replace "partner.semanticscholar.org" with "api.semanticscholar.org" in all URLs before the cutoff date.
+
+### Performance Improvements
+* **Ongoing Reminder API Rate limit**
+  * Unauthenticated: All unauthenticated users share a limit of 5,000 requests per 5 minutes.
+  * Authenticated: 1 request per second for: /paper/batch, /paper/search, /recommendations and 10 requests / second for all other calls
+
+### Other Changes
+* **Ongoing Reminder: Springer abstracts**
+  * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
+
+# **November 2023**
 
 ### **Breaking Changes**
 * **Field Deprecation - Aliases**

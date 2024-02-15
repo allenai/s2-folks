@@ -17,32 +17,6 @@
 * **Ongoing Reminder: Springer abstracts**
   * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
 
-# **November 2023**
-
-### **Breaking Changes**
-* **Field Deprecation - Aliases**
-  * Starting in January of next year we will not longer support the Aliases field.
-
-* **Ongoing Reminder: Deprecation of partner.semanticscholar.org**
-  * In December 2023 we will turn off access to partner.semanticscholar.org 
-  * Ensure that you replace "partner.semanticscholar.org" with "api.semanticscholar.org" in all URLs before the cutoff date.
-
-### **New Features**
-* **New Field: contextsWithIntent**
-  * Similar to "contexts" but each context comes with its associated intents. Each object returned in this list has two keys: 'context' - the text snippet, and 'intents' - associated intents for this context. For example 
-                    '{
-                        "context": "SciBERT (Beltagy et al., 2019) follows the BERT’s ...",
-                        "intent": "methodology", }'
-
-### Performance Improvements
-* **Ongoing Reminder API Rate limit**
-  * Unauthenticated: All unauthenticated users share a limit of 5,000 requests per 5 minutes.
-  * Authenticated: 1 request per second for: /paper/batch, /paper/search, /recommendations and 10 requests / second for all other calls
-
-### Other Changes
-* **Ongoing Reminder: Springer abstracts**
-  * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
-
 # **December 2023**
 
 ### **Breaking Changes**
@@ -89,7 +63,7 @@
   * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
 
 
-# **October 1, 2023 - October 31, 2023**
+# **October 2023**
 
 ### **Breaking Changes**
 * **Field Deprecation - Aliases**
@@ -120,7 +94,7 @@
  
 
 
-# **September 1, 2023 - September 30, 2023**
+# **September 2023**
 
 ### **Breaking Changes**
 * **Updated Terms of Service**
@@ -166,7 +140,7 @@
 
 
 
-# **August 1, 2023 - August 31, 2023**
+# **August 2023**
 
 ### **Breaking Changes**
 * **Deprecation of partner.semanticscholar.org**
@@ -193,8 +167,6 @@ This is a new, more persistent identifier for citations, which is usable instead
   * We've transitioned from bi-weekly to monthly release notes. Expect updated release notes shortly after the end of each month.
 * **Springer abstracts**
   * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
-
-
 
 
 # **June 20, 2023**

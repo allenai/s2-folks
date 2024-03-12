@@ -1,4 +1,4 @@
-# **february 2024**
+# **February 2024**
 
 ### **Breaking Changes**
 * **Field Deprecation - Aliases**

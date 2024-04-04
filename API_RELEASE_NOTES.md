@@ -17,7 +17,7 @@
 
 ### Other Changes
 * **TOS regarding multiple keys**
-  * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
+  * Please note: We provide a key to each person or projects with our best effort to manage rate limits and number of keys. Some users have been using multiple keys as a solution for needing higher rate limits that we can support. If you are doing this please reach out to me at christopherf@allenai.org so that we can find an alternative solution. 
 
 * **Ongoing Reminder: Springer abstracts**
   * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer

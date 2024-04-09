@@ -6,21 +6,21 @@
 
 ### Performance Improvements
 * **Rate Plan redesign**
-  * We found that our highest limit rate plan is never utilized, and recognize this as a risk to accidental outages from legacy keys which were given this limit while we had 10x fewer users. This rate plan with few exceptions will be deprecated. If you're concerned please reach out and please rest assured we are performing analytics on each user to prevent unintended disruptions
-  * More to come on redesiging rate plans to better fit usage profiles in coming months
+  * We found that our highest limit rate plan is never utilized, and recognized this as a risk to accidental outages from legacy keys which were given this limit while we had 10x fewer users. This rate plan with few exceptions will be deprecated. If you're concerned, please reach out and please rest assured we are performing analytics on each user to prevent unintended disruptions
+  * More to come on redesigning rate plans to better fit usage profiles in the coming months.
 
 * **Unauthenticated pool reduction**
-  * With increased traffic and renewed emphasis on systems observability we are reducing global rate limits on the unauthenticated request pool. 
+  * With increased traffic and renewed emphasis on systems observability, we are reducing global rate limits on the unauthenticated request pool. 
 
 * **Exponential backoff required**
-  * To enhance system stability and manage the load effectively, we now require the use of exponential backoff strategies for API requests. When a request fails, particularly due to rate limiting, implementing an exponential backoff involves systematically increasing the delay before retrying the request. This approach helps in preventing overloading our systems and ensures a smoother experience for all users. Please integrate exponential backoff into your retry mechanisms to comply with our updated rate plan and performance improvements.
+  * To enhance system stability and manage the load effectively, we now require the use of exponential backoff strategies for API requests. When a request fails, particularly due to rate limiting, implementing an exponential backoff involves systematically increasing the delay before retrying the request. This approach helps prevent overloading our systems and ensures a smoother experience for all users. Please integrate exponential backoff into your retry mechanisms to comply with our updated rate plan and performance improvements.
 
 ### Other Changes
 * **TOS regarding multiple keys**
-  * Please note: We provide a key to each person or projects with our best effort to manage rate limits and number of keys. Some users have been using multiple keys as a solution for needing higher rate limits that we can support. If you are doing this please reach out to me at christopherf@allenai.org so that we can find an alternative solution. 
+  * Please note: We provide a key to each person or project with our best effort to manage rate limits and the number of keys. Some users have been using multiple keys as a solution for needing higher rate limits that we can support. If you are doing this, please reach out to me at christopherf@allenai.org so that we can find an alternative solution. 
 
 * **Ongoing Reminder: Springer abstracts**
-  * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to requirements of our agreement with Springer
+  * Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to the requirements of our agreement with Springer.
 
 # **February 2024**
 

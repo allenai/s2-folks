@@ -1,5 +1,15 @@
-# **March 2024**
+# **April 2024**
+### Performance Improvements:
+  * Rate Plan redesign: All new key requests receive a 1 RPS rate limit on all endpoints.
+  * Unauthenticated pool reduction: Results of reduction of rate limits are being observed. Further reductions may come in the following months.
 
+### Ongoing Reminders:
+  *  Springer abstracts: Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to the requirements of our agreement with Springer.
+  *  Multiple keys: Please contact us if you are using multiple keys in your application so that we can plan together. We try to track when we work with a user to ensure stability. Ongoing use of multuple keys without contacting us could result in service disruptions.
+  *  Exponential backoff required: To enhance system stability and manage the load effectively, we now require the use of exponential backoff strategies for API requests.
+
+
+* # **March 2024**
 ### **Breaking Changes**
 * **partner.semanticscholar.org has been deprecated**
   * Please ensure that you replace "partner.semanticscholar.org" with "api.semanticscholar.org" in all URLs. 

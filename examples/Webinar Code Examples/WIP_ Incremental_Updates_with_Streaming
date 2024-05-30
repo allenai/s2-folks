@@ -1,0 +1,80 @@
+#frequently crashes on large datasets
+import os
+import re
+import requests
+import json
+import gzip
+import logging
+
+# Set up basic configuration for logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Function to parse filenames and extract dataset information
+def parse_filenames(directory):
+    regex = r"(\w+)_(\d{4}-\d{2}-\d{2})_part\d+.jsonl"
+    datasets = {}
+    for filename in os.listdir(directory):
+        match = re.match(regex, filename)
+        if match:
+            dataset_name, release_date = match.groups()
+            if dataset_name not in datasets or datasets[dataset_name]['end_release_id'] < release_date:
+                datasets[dataset_name] = {'start_release_id': release_date, 'end_release_id': release_date}
+    return datasets
+
+def update_datasets(api_key, datasets):
+    headers = {"x-api-key": api_key}
+    for dataset_name, info in datasets.items():
+        response = requests.get('https://api.semanticscholar.org/datasets/v1/release/latest', headers=headers)
+        if response.status_code == 200:
+            end_release_id = response.json()['release_id']
+            if info['start_release_id'] != end_release_id:
+                diff_url = (f"https://api.semanticscholar.org/datasets/v1/diffs/{info['start_release_id']}/to/{end_release_id}/{dataset_name}")
+                diff_response = requests.get(diff_url, headers=headers)
+                if diff_response.status_code == 200:
+                    diffs = diff_response.json()
+                    apply_diffs(diffs['diffs'], headers)
+                else:
+                    logging.error(f"Failed to fetch diffs for {dataset_name}. HTTP status code: {diff_response.status_code}")
+        else:
+            logging.error(f"Failed to fetch latest release ID for {dataset_name}. HTTP status code: {response.status_code}")
+
+def apply_diffs(diffs, headers):
+    for diff in diffs:
+        for url in diff['update_files']:
+            process_file(url, headers, update_data)
+        for url in diff['delete_files']:
+            process_file(url, headers, delete_data)
+
+def process_file(url, headers, operation):
+    batch = []
+    batch_size = 100  # Set batch size
+    response = requests.get(url, headers=headers, stream=True)
+    response.raise_for_status()
+    with gzip.open(response.raw, 'rt', encoding='utf-8') as gz:
+        for line in gz:
+            try:
+                record = json.loads(line)
+                batch.append(record)
+                if len(batch) >= batch_size:
+                    operation(batch)
+                    batch = []  # Reset batch after processing
+            except json.JSONDecodeError as e:
+                logging.error(f"Error decoding JSON: {e}")
+        if batch:  # Process remaining records
+            operation(batch)
+
+def update_data(batch):
+    # Update the records in your data store
+    for record in batch:
+        print(f"Update: {record}")  # Replace with actual database update logic
+
+def delete_data(batch):
+    # Delete the records from your data store
+    for record in batch:
+        print(f"Delete: {record['corpusid']}")  # Replace with actual database delete logic
+
+if __name__ == "__main__":
+    api_key = os.getenv("S2_API_KEY")
+    directory = '.'  # Current directory, adjust if necessary
+    datasets = parse_filenames(directory)
+    update_datasets(api_key, datasets)

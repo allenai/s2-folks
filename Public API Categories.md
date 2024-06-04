@@ -23,6 +23,7 @@ You can find a number of other API-related resources on our api front page at ht
 
   * /graph/v1/paper/batch
   * /graph/v1/paper/search
+  * /graph/v1/paper/search/bulk
 
 
 #### Batch Author Services

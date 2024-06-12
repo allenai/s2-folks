@@ -1,3 +1,16 @@
+# **May 2024**
+### **Breaking Changes**
+  * As announced a while ago, we've successfully deprecated the 'aliases' field! This change prevents instances of deadnaming and ensures we're respecting the identities of individuals in our database.
+
+### Performance Improvements:
+  * Rate Plan redesign: All new key requests receive a 1 RPS rate limit on all endpoints.
+  * Unauthenticated pool reduction:  We are observing the results of reducing rate limits. Based on our findings, we may introduce further reductions in the following months.
+
+### Ongoing Reminders:
+  *  Springer abstracts: Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to the requirements of our agreement with Springer.
+  *  Using multiple keys: If you need multple keys please contact feedback@semanticscholar.org to coordinate with us to prevente service disruptions
+  *  Exponential backoff required: To enhance system stability and manage the load effectively, we now require the use of exponential backoff strategies for API requests.
+
 # **April 2024**
 ### Performance Improvements:
   * Rate Plan redesign: All new key requests receive a 1 RPS rate limit on all endpoints.

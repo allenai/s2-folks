@@ -1,3 +1,19 @@
+# **June 2024**
+### **Breaking Changes**
+  * No breaking changes
+    
+### **New Feature**
+  * Title Search: Returns a single paper with the closest title match. https://api.semanticscholar.org/api-docs/#tag/Paper-Data/operation/get_graph_paper_title_search
+
+### Performance Improvements:
+  * Improved monitoring: Our service status page https://status.api.semanticscholar.org/ is now reporting metrics as P90. We expect this change to improve user experience when our systems are experiencing heavy load.
+  * Datasets cleanup: TLDR and Abstracts contained some duplicate data. This has been resolved. Note that incremental updates will not remove the duplicates. If you are impacted, please re-download the entire latest dataset to replace it with a deduplicated copy from any release of '2024-06-18' or later.
+
+### Ongoing Reminders:
+  *  Springer abstracts: Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to the requirements of our agreement with Springer.
+  *  Using multiple keys: If you need multiple keys, please contact feedback@semanticscholar.org to coordinate with us to prevent service disruptions.
+  *  Exponential backoff required: To enhance system stability and manage the load effectively, we now require the use of exponential backoff strategies for API requests.
+ 
 # **May 2024**
 ### **Breaking Changes**
   * As announced a while ago, we've successfully deprecated the 'aliases' field! This change prevents instances of deadnaming and ensures we're respecting the identities of individuals in our database.

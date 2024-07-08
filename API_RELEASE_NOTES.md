@@ -3,7 +3,7 @@
   * No breaking changes
     
 ### **New Feature**
-  * Title Search: Returns a single paper that is the closest title match. https://api.semanticscholar.org/graph/v1/paper/search/match
+  * Title Search: Returns a single paper that is the closest title match. https://api.semanticscholar.org/api-docs/#tag/Paper-Data/operation/get_graph_paper_title_search
 
 ### Performance Improvements:
   * Improved monitoring: We've made some changes to how we measure systems performance which is expected to improve user experience when our systems are experiencing heavy load. You will notice https://status.api.semanticscholar.org/ is now reporting metrics as P90.

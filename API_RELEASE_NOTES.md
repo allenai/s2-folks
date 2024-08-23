@@ -1,3 +1,13 @@
+
+# **July 2024**
+### **Breaking Changes**
+  * No breaking changes
+    
+### Ongoing Reminders:
+  *  Springer abstracts: Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to the requirements of our agreement with Springer.
+  *  Using multiple keys: If you need multiple keys, please contact feedback@semanticscholar.org to coordinate with us to prevent service disruptions.
+  *  Exponential backoff required: To enhance system stability and manage the load effectively, we now require the use of exponential backoff strategies for API requests.
+ 
 # **June 2024**
 ### **Breaking Changes**
   * No breaking changes

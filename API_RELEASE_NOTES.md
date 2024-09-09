@@ -1,8 +1,8 @@
 
 # **August 2024**
 ### **Breaking Changes**
-  * We can no longer approve requests from free emails
-  * We can no longer approve requests for 3rd party apps. Please note we are working with 3rd party developers to incorporate our data into their applications wherever possible. 
+  * We can no longer approve key requests from free email domains due to limited resources. This will not impact you if you already have a key. We appreciate your understanding.
+  * We can no longer approve key requests for 3rd party apps. We are working with 3rd party developers to incorporate our data into their applications wherever possible.
     
 ### Ongoing Reminders:
   *  Springer abstracts: Users have commented that our Public API does not show an abstract for Springer papers. This is intentional due to the requirements of our agreement with Springer.

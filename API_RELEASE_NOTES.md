@@ -1,10 +1,8 @@
 
 # **September 2024**
-### **Breaking Changes**
-  * We no longer accept key requests from free email domains due to limited resources. 
-  * We no longer approve key requests for 3rd party apps.
-    
 ### Ongoing Reminders:
+  *  We no longer accept key requests from free email domains due to limited resources. 
+  *  We no longer approve key requests for 3rd party apps.
   *  Due to the requirements of our agreement with Springer, abstracts are not available via API.
   *  We now require the use of exponential backoff strategies for API requests.
     

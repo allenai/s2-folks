@@ -1,4 +1,10 @@
 
+# **November 2024**
+### Breaking change:
+*  API keys found to be inactive for ~60 days will be automatically pruned.
+*  New key applications and past key recovery are backlogged by about 1 month.
+
+
 # **October 2024**
 ### Breaking change:
 *  API keys found to be inactive for ~60 days will be automatically pruned.

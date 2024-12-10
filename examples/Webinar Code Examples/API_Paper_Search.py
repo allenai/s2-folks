@@ -12,13 +12,18 @@ headers = {
     "x-api-key": api_key
 }
 
-# Make the POST request with headers
+# Set the fields as a query parameter
+params = {
+    "fields": "referenceCount,citationCount,title"
+}
+
+# Make the POST request with headers and params
 r = requests.post(
     'https://api.semanticscholar.org/graph/v1/paper/batch',
     headers=headers,
+    params=params,
     json={
-        "ids": ["649def34f8be52c8b66281af98ae884c09aef38b", "ARXIV:2106.15928"],
-        "fields": "referenceCount,citationCount,title"
+        "ids": ["649def34f8be52c8b66281af98ae884c09aef38b", "ARXIV:2106.15928"]
     }
 )
 

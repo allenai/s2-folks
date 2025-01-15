@@ -1,3 +1,4 @@
+# **RELEASE NOTES DISCONTINUED**
 
 # **November 2024**
 ### Breaking change:

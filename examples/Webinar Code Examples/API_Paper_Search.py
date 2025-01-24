@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-
+ 
 # Fetch API key from environment variables
 api_key = os.getenv("S2_API_KEY")
 if not api_key:
